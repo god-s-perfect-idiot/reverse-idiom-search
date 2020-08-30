@@ -55,7 +55,26 @@
     <div class="row">
       <div class="container">
         <div class="search-bar">
+            <h3 class="search-holder">Fire Away!</h3>
             <input class="expanded-search" type="text" style="font-family:Arial, FontAwesome" placeholder="&#xF002;"/>
+        </div>
+        <div class="tc">
+        <table class="results">
+          <thead>
+            <th>Phrase</th>
+            <th>Usage</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>shadow</td>
+              <td>Sad</td>
+            </tr>
+            <tr>
+              <td>shadow</td>
+              <td>Sad</td>
+            </tr> 
+          </tbody>
+        </table>
         </div>
       </div>
     </div>
@@ -77,20 +96,7 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{url_for('static', filename='js/main.js')}}"></script>
-  <script>
-    $("#short-search").click(function(){
-      $("#short-search").css("visibility","hidden");
-      $("#long-search").css("margin-top","-35px");
-      $("#long-search").css("visibility","visible");
-    });
-  </script>
-  <script>
-  $("#search").click(function(){
-      $("#long-search").css("visibility","hidden");
-      $("#long-search").css("margin-top","35px");
-      $("#short-search").css("visibility","visible");
-  });
-  </script>
+
 
 </body>
 </html>
