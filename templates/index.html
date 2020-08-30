@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RISE</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='img/favicon.png')}}" rel="icon">
+  <link href="{{url_for('static', filename='img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="{{url_for('static', filename='lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/owlcarousel/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='lib/modal-video/css/modal-video.min.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+
+
+</head>
+
+<body class="body-bg">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="nav-head">
+        Rise
+      </div>
+      <div class="nav-content">
+        <a class="nav-contents">About</a>
+        <a class="nav-contents">Download DB</a>
+        <a class="nav-contents">Credits</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="Search">
+    <div class="row">
+      <div class="container">
+        <div class="search-bar">
+          <button id="short-search" class="search-button">
+            <i class="fa fa-search"></i>
+          </button>
+          <div class="expanded">
+            &nbsp;&nbsp;
+            <input class="expanded-search" type="text"/>
+            <span>
+              <button class="expanded-button">
+                <i class="fa fa-search"></i>
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="{{url_for('static', filename='lib/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/jquery/jquery-migrate.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/hoverIntent.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/superfish/superfish.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/easing/easing.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/modal-video/js/modal-video.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/owlcarousel/owl.carousel.min.js')}}"></script>
+  <script src="{{url_for('static', filename='lib/wow/wow.min.js')}}"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="{{url_for('static', filename='contactform/contactform.js')}}"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  <script>
+    $("#short-search").click(function(){
+      alert("works");
+    });
+  </script>
+
+</body>
+</html>
