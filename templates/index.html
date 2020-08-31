@@ -54,12 +54,12 @@
   <section id="Search">
     <div class="row">
       <div class="container">
-        <div class="search-bar">
+        <div id="searchdiv" class="search-bar">
             <h3 class="search-holder">Fire Away!</h3>
-            <input class="expanded-search" type="text" style="font-family:Arial, FontAwesome" placeholder="&#xF002;"/>
+            <input id="term" class="expanded-search" type="text" style="font-family:Arial, FontAwesome" placeholder="&#xF002;"/>
         </div>
         <div class="tc">
-        <table class="results">
+        <table id="result" class="results">
           <thead>
             <th>Phrase</th>
             <th>Usage</th>
@@ -112,7 +112,34 @@
 
   <!-- Template Main Javascript File -->
   <script src="{{url_for('static', filename='js/main.js')}}"></script>
-
+  <script type="text/javascript">
+    $.sendFunction = function(){
+      var f = $("#term").val();
+      $.ajax({
+        url: "/fetch",
+        data: {searchterm:f},
+        type : 'POST',
+        success: function(response){
+          console.log(response);
+        },
+        error: function(error){
+          console.log(error);
+        }
+      });
+    }
+    document.getElementById("term").onkeypress = function(event){
+      if(event.keyCode == 13 || event.which == 13){
+        if(document.getElementById("term").value != ""){
+          document.getElementById("result").style.setProperty("visibility","visible");
+          $.sendFunction();
+        }
+      }
+    };
+    document.getElementById("term").onfocusout = function(event){
+      document.getElementById("result").style.setProperty("visibility","hidden");
+      document.getElementById("term").value ="";
+    }
+  </script>
 
 </body>
 </html>
