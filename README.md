@@ -10,3 +10,5 @@ Requirements:
 - Jquery
 - Bootstrap
 - FA
+
+Hosted at: https://godsperfectidiot.pythonanywhere.com/
