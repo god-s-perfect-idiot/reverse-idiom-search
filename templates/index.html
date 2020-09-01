@@ -56,13 +56,15 @@
       <div class="container">
         <div id="searchdiv" class="search-bar">
             <h3 class="search-holder">Fire Away!</h3>
-            <input id="term" class="expanded-search" type="text" style="font-family:Arial, FontAwesome" placeholder="&#xF002;"/>
+            <input id="term" class="expanded-search" autocomplete="off" type="text" style="font-family:Arial, FontAwesome" placeholder="&#xF002;"/>
         </div>
         <div class="tc">
         <table id="result" class="results">
           <thead>
+            <tr>
             <th>Phrase</th>
             <th>Usage</th>
+          </tr>
           </thead>
           <tbody>
             <tr>
@@ -120,7 +122,15 @@
         data: {searchterm:f},
         type : 'POST',
         success: function(response){
-          console.log(response);
+          arr = [];
+          for (var i in response){
+            arr.push(response[i]);
+          }
+          $("#result tbody").empty();
+          var loopc = arr[0].length;
+          for (var i=0; i<loopc; i++){
+            $("#result tbody").append("<tr><td>"+arr[0][i][0]+"</td><td>"+arr[0][i][1]+"</td></tr>");
+          }
         },
         error: function(error){
           console.log(error);

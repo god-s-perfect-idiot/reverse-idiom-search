@@ -33,19 +33,81 @@
 .search-bar{
   text-align: center;
   border: none;
-  padding-top: 300px;
+  padding-top: 200px;
+}
+.search-holder{
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+}
+.tc{
+  padding-top: 40px;
+}
+.results{
+  visibility: hidden;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+  text-align: center;
+  color: #fff;
+  background: rgba(69,64,147,0.6);
+  border-spacing: 10px 10px;
+  border-radius: 30px;
+
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+.results thead, tbody tr{
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+
+.results tbody {
+    display:block;
+    height:200px;
+    overflow:auto;
+}
+
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+.results th{
+  padding-bottom: 20px;
 }
 .expanded-search{
-  width: 96%;
-  height: 30px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  width: 40px;
+  height: 40px;
   border-radius: 40px;
   border:none;
   text-align: center;
 }
 .expanded-search:focus{
+  width: 80%;
   outline:none;
   box-shadow:none;
 }
+
 .expanded{
   visibility: hidden;
   display: flex;
